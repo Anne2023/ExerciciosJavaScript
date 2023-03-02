@@ -17,19 +17,7 @@ function executar(){
 }
 
 function mdc(maior, menor){
-    for(let ctrl=menor;ctrl>=1;ctrl--){
-        if(maior%ctrl==0 && menor%ctrl==0){
-            return ctrl
-        }
-    }
-}
-function mdc(maior, menor){
-    while(menor!=0){
-        let aux = maior
-        maior = menor
-        menor = aux % menor
-    }
-
-    return maior
-         
+    if(menor == 0)
+        return maior
+    mdc(menor, maior%menor)
 }
