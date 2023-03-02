@@ -19,5 +19,5 @@ function executar(){
 function mdc(maior, menor){
     if(menor == 0)
         return maior
-    mdc(menor, maior%menor)
+    return mdc(menor, maior%menor)
 }
