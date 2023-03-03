@@ -15,4 +15,3 @@ function fatorar (n){
         mult=mult*n      
     }
     return mult
-}//i,j,k variavel de controle
