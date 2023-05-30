@@ -1,10 +1,7 @@
-var btn = document.getElementById('btnCalcular')
-btn.addEventListener('click, calcular')
+var btnCalcular = document.getElementById('btnCalcular')
+btnCalcular.addEventListener('click', calcular)
 
-function calcular(){
+function calcular(params) {
     let n1 = Number(document.getElementById('n1').value)
-
-    let result = document.getElementById('result').innerText = n1>0
-
-
+    document.getElementById('result').innerText = n1/25.4
 }

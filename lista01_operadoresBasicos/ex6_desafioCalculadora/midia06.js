@@ -1,44 +1,35 @@
-var btn = document.getElementById('btnCalcular')
-btn.addEventListener('click', soma)
+var btnSomar = document.getElementById('btnSomar')
+btnSomar.addEventListener('click', ()=>{calcular('+')})
 
-function soma(){
+var btnmenos = document.getElementById('btnSub')
+btnmenos.addEventListener('click', ()=>{calcular('-')})
+
+var btnmultiplicacao = document.getElementById('btnMult')
+btnmultiplicacao.addEventListener('click', ()=>{calcular('*')})
+
+var btndivisao = document.getElementById('btnDiv')
+btndivisao.addEventListener('click', ()=>{calcular('/')})
+
+
+function calcular(operacao) {
     let n1 = Number(document.getElementById('n1').value)
     let n2 = Number(document.getElementById('n2').value)
+    let exibir;
 
-    let result = document.getElementById('result')
-    result.innerText = n1 + n2
+    switch (operacao) {
+        case '+':
+            exibir = n1+n2
+            break;
+        case '-':
+            exibir = n1-n2
+            break;
+        case '*':
+            exibir = n1*n2;
+            break;
+        default:
+            exibir = n1/n2
+            break
+            
+    }
+    document.getElementById('result').innerText = exibir
 }
-
-var btn = document.getElementById('btnSub')
-btn.addEventListener('click', sub)
-
-function sub(){
-    let n1 = Number(document.getElementById('n1').value)
-    let n2 = Number(document.getElementById('n2').value)
-
-    let result = document.getElementById('result')
-    result.innerText = n1 - n2
-}
-
-var btn = document.getElementById('btnMult')
-btn.addEventListener('click', mult)
-
-function mult (){
-    let n1 = Number(document.getElementById('n1').value)
-    let n2 = Number(document.getElementById('n2').value)
-
-    let result = document.getElementById('result')
-    result.innerText = n1 * n2
-}
-
-var btn = document.getElementById('btnDiv')
-btn.addEventListener('click', div)
-
-function div(){
-    let n1 = Number(document.getElementById('n1').value)
-    let n2 = Number(document.getElementById('n2').value)
-
-    let result = document.getElementById('result')
-    result.innerText = n1 / n2
-}
-

@@ -1,11 +1,9 @@
-var btn = document.getElementById('btnCalcular')
-btn.addEventListener('click', calcularMedia)  // nonitorando o elemento botão, quando tiver um click
+var btnCalcular = document.getElementById('btnCalcular')
+btnCalcular.addEventListener("click",contar)
 
-function calcularMedia(){
-    let n1 = Number( document.getElementById('n1').value )    //(let) variável local
-    let n2 = Number( document.getElementById('n2').value )   //(var) variavel global 
-                                                            //(const) variavel local e a diferença do let é que ela é fixa
-     
-    let result = document.getElementById('result').innerText = (n1*n2) 
-     
-} 
+function contar() {
+    let n1 = Number(document.getElementById('n1').value)
+    let n2 =  Number(document.getElementById('n2').value)
+    let media = (n1 + n2)/2;
+    (document.getElementById('result')).innerText = (`A média de n1 e n2 é ${media}`);
+}

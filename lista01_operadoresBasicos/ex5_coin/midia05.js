@@ -1,9 +1,8 @@
-var btn = document.getElementById('btnCalcular')
-btn.addEventListener('click')
+var btnCalcular = document.getElementById('btnCalcular')
+btnCalcular.addEventListener('click', calcular)
 
-function calcular({
-    let n1 = Number( document.getElementById('n1').value )
-    let n2 = (n1*1.609)
-
-    let result = document.getElementById('result').innerText = (n1*n2)
-})
+function calcular() {
+    let n1 = Number(document.getElementById('n1').value)
+    
+    document.getElementById('result').innerText = n1 * 1.60934
+}
